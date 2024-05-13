@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>formulario</title>
+</head>
+
+<body>
+    <header>
+        <h1>TP Nº5</h1>
+    </header>
+    <main>
+        <h3> 1- ¿Qué atributo se utiliza para especificar la URL a la que se enviarán los datos del formulario a) method
+            <u>b) action</u> c) target d) url
+        </h3>
+        <h3>2- ¿Cuál es el atributo que se utiliza para especificar el tipo de datos que se espera en un campo de
+            entrada? a) data-type b) input-type <u>c) type</u> d) data</h3>
+        <h3>3-¿Cuál de los siguientes tipos de campo de entrada se utiliza para ingresar direcciones de correo
+            electrónico? a) text <u>b) email</u> c) mail d) input</h3>
+        <h3>4-¿Cuál es el elemento HTML que se utiliza para asociar un texto descriptivo con un campo de entrada en un
+            formulario? a) description> b) info> c) placeholder> <u>d) label>/label></u></h3>
+        <h3>5-¿Cuál de las siguientes opciones es la etiqueta correcta para crear un botón de envío en un formulario? a)
+            input type="submit"> <u>b) button type="submit"></u> c) btn> d) submit></h3>
+        <h3>6-¿Cuál de los siguientes atributos se utiliza para hacer que un campo de entrada sea obligatorio en un
+            formulario? <u>a) required</u> b) mandatory c) validate d) mandatoryfield</h3>
+        <h3>7-¿Cuál de los siguientes elementos HTML se utiliza para crear una lista desplegable en un formulario? a)
+            list> <u>b) dropdown></u> c) select> d) input type="list"></h3>
+        <h3>8-¿Cuál de los siguientes tipos de campo de entrada se utiliza para ingresar un apellido? <u>a) text</u> b)
+            email c) mail d) input</h3>
+        <h3>9-¿Qué atributo se utiliza para definir un valor predeterminado en un campo de entrada de un formulario? a)
+            value b) default c) preset <u>d) initial</u></h3>
+        <h3>10- ¿Qué son los métodos / verbos de petición HTTP? Dar ejemplos. Bibliografía?</h3>
+        <p>HTTP define un conjunto de métodos de petición para indicar la acción que se desea realizar para un recurso
+            determinado. Aunque estos también pueden ser sustantivos, estos métodos de solicitud a veces son llamados
+            HTTP verbs. Cada uno de ellos implementan una semántica diferente, pero algunas características similares
+            son compartidas por un grupo de ellos: ej. un request method
+            un ejemplo tambien seria:
+            El método GET solicita una representación de un recurso específico. Las peticiones que usan el método GET
+            sólo deben recuperar datos</p>
+        <h3>¿Qué son los códigos de estado de respuestas HTTP? Realizar una tabla con su clasificación</h3>
+        <table>
+            <tr>
+                <th>clasificacion</th>
+                <th>codigo</th>
+                <th>nombre</th>
+                <th>descripcion</th>
+            </tr>
+            <tr>
+                <td rowspan="4">informativos</td>
+                <td>100</td>
+                <td>continue</td>
+                <td>Esta respuesta provisional indica que todo hasta ahora está bien y que el cliente debe continuar con
+                    la solicitud o ignorarla si ya está terminada.</td>
+            </tr>
+            <tr>
+                <td>101</td>
+                <td>Switching Protocols</td>
+                <td>Este código se envía en respuesta a un encabezado de solicitud Upgrade por el cliente e indica que
+                    el servidor acepta el cambio de protocolo propuesto por el agente de usuario.</td>
+            </tr>
+            <tr>
+                <td>102</td>
+                <td>processing</td>
+                <td>Este código indica que el servidor ha recibido la solicitud y aún se encuentra procesandola, por lo
+                    que no hay respuesta disponible.</td>
+            </tr>
+            <tr>
+                <td>103</td>
+                <td>early hints</td>
+                <td>Este código de estado está pensado principalmente para ser usado con el encabezado Link, permitiendo
+                    que el agente de usuario empiece a pre-cargar recursos mientras el servidor prepara una respuesta
+                </td>
+            </tr>
+            <tr>
+                <td rowspan="10">satisfactorias</td>
+                <td>200</td>
+                <td>OK</td>
+                <td>La solicitud ha tenido éxito. El significado de un éxito varía dependiendo del método HTTP:</td>
+            </tr>
+            <tr>
+                <td>201</td>
+                <td>created</td>
+                <td>La solicitud ha tenido éxito y se ha creado un nuevo recurso como resultado de ello. Ésta es
+                    típicamente la respuesta enviada después de una petición PUT.</td>
+            </tr>
+            <tr>
+                <td>202</td>
+                <td>acceptep</td>
+                <td>La solicitud se ha recibido, pero aún no se ha actuado. Es una petición "sin compromiso", lo que
+                    significa que no hay manera en HTTP que permite enviar una respuesta asíncrona que indique el
+                    resultado del procesamiento de la solicitud. Está pensado para los casos en que otro proceso o
+                    servidor maneja la solicitud, o para el procesamiento por lotes.</td>
+            </tr>
+            <tr>
+                <td>203</td>
+                <td>Non-Authoritative Information</td>
+                <td>La petición se ha completado con éxito, pero su contenido no se ha obtenido de la fuente
+                    originalmente solicitada, sino que se recoge de una copia local o de un tercero. Excepto esta
+                    condición, se debe preferir una respuesta de 200 OK en lugar de esta respuesta.</td>
+            </tr>
+            <tr>
+                <td>204</td>
+                <td>no content</td>
+                <td>La petición se ha completado con éxito pero su respuesta no tiene ningún contenido, aunque los
+                    encabezados pueden ser útiles. El agente de usuario puede actualizar sus encabezados en caché para
+                    este recurso con los nuevos valores.</td>
+            </tr>
+            <tr>
+                <td>205</td>
+                <td>reset content</td>
+                <td>La petición se ha completado con éxito, pero su respuesta no tiene contenidos y además, el agente de
+                    usuario tiene que inicializar la página desde la que se realizó la petición, este código es útil por
+                    ejemplo para páginas con formularios cuyo contenido debe borrarse después de que el usuario lo
+                    envíe.</td>
+            </tr>
+            <tr>
+                <td>206</td>
+                <td>partial content</td>
+                <td>La petición servirá parcialmente el contenido solicitado. Esta característica es utilizada por
+                    herramientas de descarga como wget para continuar la transferencia de descargas anteriormente
+                    interrumpidas, o para dividir una descarga y procesar las partes simultáneamente.</td>
+            </tr>
+            <tr>
+                <td>207</td>
+                <td>multi status</td>
+                <td>Una respuesta Multi-Estado transmite información sobre varios recursos en situaciones en las que
+                    varios códigos de estado podrían ser apropiados. El cuerpo de la petición es un mensaje XML.</td>
+            </tr>
+            <tr>
+                <td>208</td>
+                <td>multi status</td>
+                <td>El listado de elementos DAV ya se notificó previamente, por lo que no se van a volver a listar.</td>
+            </tr>
+            <tr>
+                <td>226</td>
+                <td>IM used</td>
+                <td>El servidor ha cumplido una petición GET para el recurso y la respuesta es una representación del
+                    resultado de una o más manipulaciones de instancia aplicadas a la instancia actual.</td>
+            </tr>
+            <tr>
+                <td rowspan="9">redirecciones</td>
+                <td>300</td>
+                <td>multiple choice</td>
+                <td>Esta solicitud tiene más de una posible respuesta. User-Agent o el usuario debe escoger uno de
+                    ellos. No hay forma estandarizada de seleccionar una de las respuestas.</td>
+            </tr>
+            <tr>
+                <td>301</td>
+                <td>moved permanently</td>
+                <td>Este código de respuesta significa que la URI del recurso solicitado ha sido cambiado. Probablemente
+                    una nueva URI sea devuelta en la respuesta.</td>
+            </tr>
+            <tr>
+                <td>302</td>
+                <td>found</td>
+                <td>Este código de respuesta significa que el recurso de la URI solicitada ha sido cambiado
+                    temporalmente. Nuevos cambios en la URI serán agregados en el futuro. Por lo tanto, la misma URI
+                    debe ser usada por el cliente en futuras solicitudes.</td>
+            </tr>
+            <tr>
+                <td>303</td>
+                <td>see other</td>
+                <td>El servidor envía esta respuesta para dirigir al cliente a un nuevo recurso solicitado a otra
+                    dirección usando una petición GET.</td>
+            </tr>
+            <tr>
+                <td>304</td>
+                <td>not modified</td>
+                <td>Esta es usada para propósitos de "caché". Le indica al cliente que la respuesta no ha sido
+                    modificada. Entonces, el cliente puede continuar usando la misma versión almacenada en su caché.
+                </td>
+            </tr>
+            <tr>
+                <td>305</td>
+                <td>use proxy</td>
+                <td>Fue definida en una versión previa de la especificación del protocolo HTTP para indicar que una
+                    respuesta solicitada debe ser accedida desde un proxy. Ha quedado obsoleta debido a preocupaciones
+                    de seguridad correspondientes a la configuración de un proxy.</td>
+            </tr>
+            <tr>
+                <td>306</td>
+                <td>unused</td>
+                <td>Este código de respuesta ya no es usado más. Actualmente se encuentra reservado. Fue usado en
+                    previas versiones de la especificación HTTP1.1.</td>
+            </tr>
+            <tr>
+                <td>307</td>
+                <td>temporary redirect</td>
+                <td>
+                    El servidor envía esta respuesta para dirigir al cliente a obtener el recurso solicitado a otra URI
+                    con el mismo método que se usó la petición anterior. Tiene la misma semántica que el código de
+                    respuesta HTTP 302 Found, con la excepción de que el agente usuario no debe cambiar el método HTTP
+                    usado: si un POST fue usado en la primera petición, otro POST debe ser usado en la segunda petición.
+                </td>
+            </tr>
+            <tr>
+                <td>308</td>
+                <td>permanent redirect</td>
+                <td>
+                    Significa que el recurso ahora se encuentra permanentemente en otra URI, especificada por la
+                    respuesta de encabezado HTTP Location:. Tiene la misma semántica que el código de respuesta HTTP 301
+                    Moved Permanently, con la excepción de que el agente usuario no debe cambiar el método HTTP usado:
+                    si un POST fue usado en la primera petición, otro POST debe ser usado en la segunda petición.
+                </td>
+            </tr>
+            <tr>
+                <td rowspan="28">errores del cliente</td>
+                <td>400</td>
+                <td>bad request</td>
+                <td>Esta respuesta significa que el servidor no pudo interpretar la solicitud dada una sintaxis
+                    inválida.</td>
+            </tr>
+            <tr>
+                <td>401</td>
+                <td>unauthorized</td>
+                <td>Es necesario autenticar para obtener la respuesta solicitada. Esta es similar a 403, pero en este
+                    caso, la autenticación es posible.</td>
+            </tr>
+            <tr>
+                <td>402</td>
+                <td>payment required</td>
+                <td>Este código de respuesta está reservado para futuros usos. El objetivo inicial de crear este código
+                    fue para ser utilizado en sistemas digitales de pagos. Sin embargo, no está siendo usado actualmente
+                </td>
+            </tr>
+            <tr>
+                <td>403</td>
+                <td>forbidden</td>
+                <td>El cliente no posee los permisos necesarios para cierto contenido, por lo que el servidor está
+                    rechazando otorgar una respuesta apropiada.</td>
+            </tr>
+            <tr>
+                <td>404</td>
+                <td>not found</td>
+                <td>El servidor no pudo encontrar el contenido solicitado. Este código de respuesta es uno de los más
+                    famosos dada su alta ocurrencia en la web.</td>
+            </tr>
+            <tr>
+                <td>405</td>
+                <td>method not allowed</td>
+                <td>El método solicitado es conocido por el servidor pero ha sido deshabilitado y no puede ser
+                    utilizado. Los dos métodos obligatorios, GET y HEAD, nunca deben ser deshabilitados y no deberían
+                    retornar este código de error.</td>
+            </tr>
+            <tr>
+                <td>406</td>
+                <td>not acceptable</td>
+                <td>Esta respuesta es enviada cuando el servidor, después de aplicar una negociación de contenido
+                    servidor-impulsado, no encuentra ningún contenido seguido por la criteria dada por el usuario.</td>
+            </tr>
+            <tr>
+                <td>407</td>
+                <td>Proxy Authentication Required</td>
+                <td>Esto es similar al código 401, pero la autenticación debe estar hecha a partir de un proxy.</td>
+            </tr>
+            <tr>
+                <td>408</td>
+                <td>request timeout</td>
+                <td>Esta respuesta es enviada en una conexión inactiva en algunos servidores, incluso sin alguna
+                    petición previa por el cliente. Significa que el servidor quiere desconectar esta conexión sin usar.
+                    Esta respuesta es muy usada desde algunos navegadores, como Chrome, Firefox 27+, o IE9, usa
+                    mecanismos de pre-conexión HTTP para acelerar la navegación. También hay que tener en cuenta que
+                    algunos servidores simplemente desconecta la conexión sin enviar este mensaje.</td>
+            </tr>
+            <tr>
+                <td>409</td>
+                <td>conflict</td>
+                <td>Esta respuesta puede ser enviada cuando una petición tiene conflicto con el estado actual del
+                    servidor.</td>
+            </tr>
+            <tr>
+                <td>410</td>
+                <td>gone</td>
+                <td>Esta respuesta puede ser enviada cuando el contenido solicitado ha sido borrado del servidor.</td>
+            </tr>
+            <tr>
+                <td>411</td>
+                <td>length required</td>
+                <td>El servidor rechaza la petición porque el campo de encabezado Content-Length no esta definido y el
+                    servidor lo requiere.</td>
+            </tr>
+            <tr>
+                <td>412</td>
+                <td>Precondition Failed</td>
+                <td>El cliente ha indicado pre-condiciones en sus encabezados la cual el servidor no cumple</td>
+            </tr>
+            <tr>
+                <td>413</td>
+                <td>payload too large</td>
+                <td>La entidad de petición es más larga que los límites definidos por el servidor; el servidor puede
+                    cerrar la conexión o retornar un campo de encabezado Retry-After.</td>
+            </tr>
+            <tr>
+                <td>414</td>
+                <td>URI too long</td>
+                <td>La URI solicitada por el cliente es más larga de lo que el servidor está dispuesto a interpretar.
+                </td>
+            </tr>
+            <tr>
+                <td>415</td>
+                <td>unsupported media type</td>
+                <td>El formato multimedia de los datos solicitados no está soportado por el servidor, por lo cual el
+                    servidor rechaza la solicitud.</td>
+            </tr>
+            <tr>
+                <td>416</td>
+                <td>Range Not Satisfiable</td>
+                <td>El rango especificado por el campo de encabezado Range en la solicitud no cumple; es posible que el
+                    rango está fuera del tamaño de los datos objetivo del URI.</td>
+            </tr>
+            <tr>
+                <td>417</td>
+                <td>expectation failed</td>
+                <td>Significa que la expectativa indicada por el campo de encabezado Expect solicitada no puede ser
+                    cumplida por el servidor.</td>
+            </tr>
+            <tr>
+                <td>418</td>
+                <td>I'm a teapot</td>
+                <td>El servidor se rehúsa a intentar hacer café con una tetera</td>
+            </tr>
+            <tr>
+                <td>421</td>
+                <td>Misdirected Request</td>
+                <td>La petición fue dirigida a un servidor que no es capaz de producir una respuesta. Esto puede ser
+                    enviado por un servidor que no está configurado para producir respuestas por la combinación del
+                    esquema y la autoridad que están incluidos en la URI solicitada</td>
+            </tr>
+            <tr>
+                <td>422</td>
+                <td>Unprocessable Content</td>
+                <td>La petición estaba bien formada pero no se pudo seguir debido a errores de semántica.</td>
+            </tr>
+            <tr>
+                <td>423</td>
+                <td>locked</td>
+                <td>El recurso que está siendo accedido está bloqueado.</td>
+            </tr>
+            <tr>
+                <td>424</td>
+                <td>failed dependency</td>
+                <td>La petición falló debido a una falla de una petición previa</td>
+            </tr>
+            <tr>
+                <td>426</td>
+                <td>upgrade required</td>
+                <td>El servidor se rehúsa a aplicar la solicitud usando el protocolo actual pero puede estar dispuesto a
+                    hacerlo después que el cliente se actualice a un protocolo diferente. El servidor envía un
+                    encabezado Upgrade en una respuesta para indicar los protocolos requeridos.</td>
+            </tr>
+            <tr>
+                <td>428</td>
+                <td>precondition required</td>
+                <td>El servidor origen requiere que la solicitud sea condicional. Tiene la intención de prevenir
+                    problemas de 'actualización perdida', donde un cliente OBTIENE un estado del recurso, lo modifica, y
+                    lo PONE devuelta al servidor, cuando mientras un tercero ha modificado el estado del servidor,
+                    llevando a un conflicto.</td>
+            </tr>
+            <tr>
+                <td>429</td>
+                <td>too many requests</td>
+                <td> El usuario ha enviado demasiadas solicitudes en un periodo de tiempo dado.</td>
+            </tr>
+            <tr>
+                <td>431</td>
+                <td>Request Header Fields Too Large</td>
+                <td>El servidor no está dispuesto a procesar la solicitud porque los campos de encabezado son demasiado
+                    largos. La solicitud PUEDE volver a subirse después de reducir el tamaño de los campos de encabezado
+                    solicitados.</td>
+            </tr>
+            <tr>
+                <td>451</td>
+                <td>Unavailable For Legal Reasons</td>
+                <td>El usuario solicita un recurso ilegal, como alguna página web censurada por algún gobierno</td>
+            </tr>
+            <tr>
+                <td rowspan="11">errores del servidor</td>
+                <td>500</td>
+                <td>internal server error</td>
+                <td>El servidor ha encontrado una situación que no sabe cómo manejarla.</td>
+            </tr>
+            <tr>
+                <td>501</td>
+                <td>not implemented</td>
+                <td>El método solicitado no está soportado por el servidor y no puede ser manejado. Los únicos métodos
+                    que los servidores requieren soporte (y por lo tanto no deben retornar este código) son GET y HEAD.
+                </td>
+            </tr>
+            <tr>
+                <td>502</td>
+                <td>bad gateway</td>
+                <td>Esta respuesta de error significa que el servidor, mientras trabaja como una puerta de enlace para
+                    obtener una respuesta necesaria para manejar la petición, obtuvo una respuesta inválida.</td>
+            </tr>
+            <tr>
+                <td>503</td>
+                <td>service unavaible</td>
+                <td>El servidor no está listo para manejar la petición. Causas comunes puede ser que el servidor está
+                    caído por mantenimiento o está sobrecargado. Hay que tomar en cuenta que junto con esta respuesta,
+                    una página usuario-amigable explicando el problema debe ser enviada. Estas respuestas deben ser
+                    usadas para condiciones temporales y el encabezado HTTP Retry-After: debería, si es posible,
+                    contener el tiempo estimado antes de la recuperación del servicio. El webmaster debe también cuidar
+                    los encabezados relacionados al caché que son enviados junto a esta respuesta, ya que estas
+                    respuestas de condición temporal deben usualmente no estar en el caché.</td>
+            </tr>
+            <tr>
+                <td>504</td>
+                <td>gateway timeout</td>
+                <td>Esta respuesta de error es dada cuando el servidor está actuando como una puerta de enlace y no
+                    puede obtener una respuesta a tiempo.</td>
+            </tr>
+            <tr>
+                <td>505</td>
+                <td>HTTP Version Not Supported</td>
+                <td>La versión de HTTP usada en la petición no está soportada por el servidor.</td>
+            </tr>
+            <tr>
+                <td>506</td>
+                <td>variant also negotiates</td>
+                <td>El servidor tiene un error de configuración interna: negociación de contenido transparente para la
+                    petición resulta en una referencia circular.</td>
+            </tr>
+            <tr>
+                <td>507</td>
+                <td>Insufficient Storage</td>
+                <td>El servidor tiene un error de configuración interna: la variable de recurso escogida está
+                    configurada para acoplar la negociación de contenido transparente misma, y no es por lo tanto un
+                    punto final adecuado para el proceso de negociación.</td>
+            </tr>
+            <tr>
+                <td>508</td>
+                <td>loop detected </td>
+                <td>El servidor detectó un ciclo infinito mientras procesaba la solicitud.
+                </td>
+            </tr>
+            <tr>
+                <td>510</td>
+                <td>no extended</td>
+                <td>Extensiones adicionales para la solicitud son requeridas para que el servidor las cumpla.</td>
+            </tr>
+            <tr>
+                <td>511</td>
+                <td>Network Authentication Required</td>
+                <td>El código de estado 511 indica que el cliente necesita autenticar para obtener acceso a la red.</td>
+            </tr>
+
+
+        </table>
+    </main>
+
+    <footer></footer>
+</body>
+
+</html>
